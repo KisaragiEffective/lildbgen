@@ -69,7 +69,7 @@ impl FromStr for GUID {
             return Err(())
         }
 
-        Ok(Self(s.to_string().into_boxed_str()))
+        Ok(Self(Box::from(s)))
     }
 }
 
